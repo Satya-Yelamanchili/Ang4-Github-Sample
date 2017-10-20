@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { appRouting } from './app.router';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
-import { ProfilesearchService } from '../app/serices/profilesearch.service';
+import { ProfilesearchService } from '../app/services/profilesearch.service';
 import { RepoComponent } from './profile/repo/repo.component';
 import { PublicGitComponent } from './profile/public-git/public-git.component';
 import { FollowerComponent } from './profile/follower/follower.component';

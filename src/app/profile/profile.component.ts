@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ProfilesearchService } from '../serices/profilesearch.service';
+import { ProfilesearchService } from '../services/profilesearch.service';
 
 @Component({
   selector: 'app-profile',
