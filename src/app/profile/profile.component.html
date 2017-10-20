@@ -1,0 +1,43 @@
+<div class="panel panel-default" *ngIf="userDetails">
+    <div class="panel-heading">
+        <h4>{{ userDetails.name }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel-body">
+                <div style="width: 230px">
+                    <img src="{{ userDetails.avatar_url }}" class="img-circle img-thumbnail">
+                    <h3 style="display: block">{{ userDetails.name }}</h3>
+                    <h5 class="text-muted">{{ userDetails.login }}</h5>
+                    <a class="text-primary" target="_blank" href="{{ userDetails.html_url }}">User Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <ul class="nav nav-pills">
+                <li>
+                    <a [routerLink]="['repos',{url: repourl }]"> Public Repos
+                        <span class="badge">{{ userDetails.public_repos}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['gits',{url: gitUrl }]">Public Gits
+                        <span class="badge">{{ userDetails.public_gists }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['followers',{url: followersUrl }]">Followers
+                        <span class="badge">{{ userDetails.followers }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['following',{url: followingUrl }]">Following
+                        <span class="badge">{{ userDetails.following }}</span>
+                    </a>
+                </li>
+            </ul>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
