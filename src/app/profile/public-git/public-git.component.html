@@ -1,3 +1,19 @@
-<p>
-  public-git works!
-</p>
+<ng-container *ngIf="repoList?.length > 0; else elseTemplate">
+  <div class="row">
+    <div *ngFor="let item of repoList">
+      <div class="col-md-4" style="margin-bottom: 10px">
+        <h4>
+          <a href="{{ item.html_url }}" target="_blank ">{{ item.name }} </a>
+        </h4>
+        <p>{{ item.description }} </p>
+        <p>Created on {{ item.created_at | date: "MM/dd/yyyy" }}</p>
+        <p>Updated on {{ item.updated_at | date:"MM/dd/yyyy" }} </p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="row">
+    No Public Git's exist for the user.
+  </div>
+</ng-template>

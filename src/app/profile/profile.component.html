@@ -17,22 +17,22 @@
         <div class="col-md-8">
             <ul class="nav nav-pills">
                 <li>
-                    <a [routerLink]="['repos',{url: repourl }]"> Public Repos
+                    <a [routerLink]="['repos',{url: repourl | replaceText }]"> Public Repos
                         <span class="badge">{{ userDetails.public_repos}}</span>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['gits',{url: gitUrl }]">Public Gits
+                    <a [routerLink]="['gits',{url: gitUrl | replaceText }]">Public Gits
                         <span class="badge">{{ userDetails.public_gists }}</span>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['followers',{url: followersUrl }]">Followers
+                    <a [routerLink]="['followers',{url: followersUrl | replaceText }]">Followers
                         <span class="badge">{{ userDetails.followers }}</span>
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['following',{url: followingUrl }]">Following
+                    <a [routerLink]="['following',{url: followingUrl | replaceText }]">Following
                         <span class="badge">{{ userDetails.following }}</span>
                     </a>
                 </li>

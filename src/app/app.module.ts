@@ -12,6 +12,7 @@ import { RepoComponent } from './profile/repo/repo.component';
 import { PublicGitComponent } from './profile/public-git/public-git.component';
 import { FollowerComponent } from './profile/follower/follower.component';
 import { FollowingComponent } from './profile/following/following.component';
+import { ReplaceTextPipe } from './pipe/replace-text.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FollowingComponent } from './profile/following/following.component';
     RepoComponent,
     PublicGitComponent,
     FollowerComponent,
-    FollowingComponent
+    FollowingComponent,
+    ReplaceTextPipe
   ],
   imports: [
     BrowserModule,
